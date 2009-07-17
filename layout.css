@@ -7,10 +7,18 @@
 
 /* -------------- top row --------------- */
 div.dokuwiki .header {
-/*  padding: 3px 0 0 2px; */
-/*  background: __background_alt__ url(images/sidebar-border.gif) repeat-y 85%; */
-  background: __background_alt__;
-  border-bottom: 1px solid __border__;
+  background: __background_alt__ ;
+}
+
+/* rip */
+div.dokuwiki .toprip {
+  width: 100%;
+  height: 16px;
+  background: __background_alt__ url(images/riptorn1.png) repeat-x;
+}
+
+div.dokuwiki .stylehead {
+	margin: 0 0 10px 0;
 }
 
 /* :: blog ~ */
@@ -81,7 +89,22 @@ div.dokuwiki .stylefoot {
 	background: __background_alt__;
 	font-size: 70%;
 	color: __text_neu__;
-	padding: 3px 0 3px 223px;
+	padding: 0 0 0 0;
+	margin: 10px 0 0 0;
+}
+
+/* rip - style foot top */
+div.dokuwiki .footrip1 {
+  width: 100%;
+  height: 22px;
+  background: __background_alt__ url(images/riptorn-inverse.png) repeat-x;
+}
+
+/* rip - page bottom */
+div.dokuwiki .footrip2 {
+  width: 100%;
+  height: 22px;
+  background: __background_alt__ url(images/riptorn2.png) repeat-x;
 }
 
 /* ---------------  top and bottom bar ---------------- */

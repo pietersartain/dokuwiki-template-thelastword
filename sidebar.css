@@ -8,12 +8,14 @@
 
 /* sidebar orientation and position */
 #sidebar {
-  width:200px; 
-  min-width:200px;
-  margin:0; 
+  width:210px; 
+  min-width:210px;
+  margin:10px; 
   padding:10px;
-  background: url('images/bigsplodge50.png') no-repeat;
+  background: __background_alt__ url('images/bigsplodge50.png') no-repeat;
   background-position: bottom left;
+  border: 1px solid __border__;
+  float: left;
 }
 
 #sidebartop {
@@ -24,90 +26,69 @@
   background: __background_alt__;
 }
 
-.sidebar_inside_left #sidebar {
-    min-width:200px;
-}
+/* Rounded box additions - karate corners
+ * http://www.kyleschaeffer.com/tutorials/karate-corners-easy-rounded-corners-xhtml-no-script/
+ */
 
-.sidebar_inside_right #sidebar {
-    float:right; 
-}
+.cornerBox { position: relative; background: #cfcfcf; width: 100%; }
+.corner { position: absolute; width: 10px; height: 10px; background: url('images/corners.gif') no-repeat; font-size: 0%; }
+.cornerBoxInner { padding: 5px; }
+.TL { top: -1px; left: -1px; background-position: 0 0; }
+.TR { top: -1px; right: -1px; background-position: -10px 0; }
+.BL { bottom: -1px; left: -1px; background-position: 0 -10px; }
+.BR { bottom: -1px; right: -1px; background-position: -10px -10px; }
 
+/* Rounded box additions - one gif
+ * http://www.456bereastreet.com/lab/teaser/one_image/
+ */
 /*
-.sidebar_inside_left .dokuwiki div.breadcrumbs {
-	padding: 0 1% 0 230px;
-}
+	.teaser {
+		width:200px;
+		padding:0 0 14px 0;
+		margin:10px auto;
+		background:url("images/sidebar.gif") bottom left no-repeat;
+	}
+	.teaser h3 {
+		margin:0;
+		padding:7px 10px 3px 10px;
+		background:url("images/sidebar.gif") top left no-repeat;
+	}
+	.teaser p, .teaser a.more {
+		margin:0;
+		padding:0 10px 3px;
+		border:1px solid #d8d8d8;
+		border-width:0 1px;
+		background:#fff;
+	}
 */
 
-
+/* Rounded box additions - overlay
+ * http://www.dave-woods.co.uk/?p=207
+ */
 /*
-.sidebar_inside_left .dokuwiki div.breadcrumbs {
-    float: right;
-    width: 78%;
-    padding: 0 1% 0 0.9%;
+.tl, .tr, .bl, .br {
+background: url(images/corners.gif);
+width: 10px;
+height: 10px;
+font-size: 0;
+}
+
+.tl, .bl {
+float: left;
+}
+.tr, .br {
+float: right;
+}
+
+.box-content {
+clear: both;
+padding: 0 10px;
+overflow: hidden;
+}
+* html .box-content {
+height: 1%;
 }
 */
-
-
-.sidebar_inside_left .dokuwiki .page, .sidebar_inside_left .dokuwiki .meta {
-    float:right;
-    width:80%; 
-    margin-right: 1%;
-    margin-left: 0;
-}
-
-.sidebar_inside_right .dokuwiki .page, .sidebar_inside_right .dokuwiki .meta, .sidebar_inside_right .dokuwiki .breadcrumbs {
-    float:left; 
-    width:80%; 
-    margin-left: 1%;
-    margin-right: 0;
-}
-
-.sidebar_outside_left #sidebar {
-    position:absolute; 
-    top:0; 
-    left:0;
-}
-
-.sidebar_outside_right #sidebar {
-    position:absolute; 
-    top:0; 
-    right:0;
-}
-
-.sidebar_outside_left .dokuwiki {
-    padding-left:21%;
-}
-
-.sidebar_outside_right .dokuwiki {
-    padding-right:21%;
-}
-
-.sidebar_outside_left .footerinc {
-    padding-left: 21%;
-}
-
-.sidebar_outside_right .footerinc {
-    padding-right: 21%;
-} 
-
-
-/* sidebar presentation */
-/* the following three styles use a faux-column image to place a separating line 
-   between the sidebar and dokuwiku */
-/*
-.sidebar_outside_left .dokuwiki, .sidebar_inside_left .dokuwiki {
-    background: url(images/sidebar-border.gif) repeat-y 20%;
-}
-
-.sidebar_outside_right .dokuwiki, .sidebar_inside_right .dokuwiki {
-    background: url(images/sidebar-border.gif) repeat-y 80%;
-}
-*/
-
-/* hide the line where it passes through .stylehead */
-.stylehead {
-    background: __background__;
-}
 
 /* sidebar contents */
 #sidebar {

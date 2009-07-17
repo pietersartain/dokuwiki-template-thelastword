@@ -46,8 +46,10 @@ if (!defined('DOKU_INC')) die();
 <div class="dokuwiki">
   <?php html_msgarea()?>
 
+  <!-- stylehead start -->
   <div class="stylehead">
 
+    <!-- header start -->
     <div class="header">
 	
 	  <div class="tlw">
@@ -85,73 +87,92 @@ if (!defined('DOKU_INC')) die();
 
       <div class="clearer"></div>
     </div>
+    <!-- header stop -->
 
     <?php /*old includehook*/ @include(dirname(__FILE__).'/header.html')?>
+	
+	<div class="toprip">&nbsp;</div>
 
   </div>
+  <!-- stylhead stop -->
 
   <?php flush()?>
 
   <?php /*old includehook*/ @include(dirname(__FILE__).'/pageheader.html')?>
 
+<!-- content start -->
 <div class="content">
 
+    <!-- breadcrumbs start -->
+	<?php if($conf['breadcrumbs']){?>
+	<div class="breadcrumbs">
+	  <?php tpl_breadcrumbs()?>
+	  <?php //tpl_youarehere() //(some people prefer this)
+	  ?>
+	</div>
+	<?php }?>
+    <!-- breadcrumbs stop -->
 
+    <!-- trace start -->
+	<?php if($conf['youarehere']){?>
+	<div class="breadcrumbs">
+	  <?php tpl_youarehere() ?>
+	</div>
+	<?php }?>
+    <!-- trace stop -->
+
+  <!-- sidebar start for karate corners -->
+  <?php if (tpl_getConf('enable')) { ?>
+  <div id="sidebar" class="cornerBox">
+    <div class="corner TL"></div>
+    <div class="corner TR"></div>
+    <div class="corner BL"></div>
+    <div class="corner BR"></div>
+	<div class="cornerBoxInner">
+      <?php tpl_userinfo()?>
+      <div id="sidebar_content">
+        <?php tpl_sidebar_content('blog_sidebar'); ?>
+      </div>
+      <br></br>
+      <br></br>
+      <hr style='clear: left;'></hr>
+        <?php tpl_pageinfo()?>
+      <hr style='clear: left;'></hr>
+      <?php /*old includehook*/ @include(dirname(__FILE__).'/footer.html')?>
+	</div>
+    <!-- cornerBoxInner end -->
+  </div>
+  <?php } ?>
+  <!-- sidebar stop -->
+
+  <!-- page start -->
   <div class="page">
 
-    <?php if($conf['breadcrumbs']){?>
-    <div class="breadcrumbs">
-      <?php tpl_breadcrumbs()?>
-      <?php //tpl_youarehere() //(some people prefer this)?>
-    </div>
-    <?php }?>
-
-    <?php if($conf['youarehere']){?>
-    <div class="breadcrumbs">
-      <?php tpl_youarehere() ?>
-    </div>
-    <?php }?>
-
-
-    <!-- wikipage start -->
-    <?php tpl_content()?>
-    <!-- wikipage stop -->	
-  </div>
-
-<?php if (tpl_getConf('enable')) { ?>
-  <div id="sidebar">
+	<!-- wikipage start -->
+	<?php tpl_content()?>
+	<!-- wikipage stop -->	
   
-   	<?php tpl_userinfo()?>
-  
-    <div id="sidebar_content">
-      <?php tpl_sidebar_content('blog_sidebar'); ?>
-    </div>
-	
-	<br></br>
-	<br></br>
-	<hr style='clear: left;'></hr>
-	<?php tpl_pageinfo()?>
-	<hr style='clear: left;'></hr>
-	
-	<?php /*old includehook*/ @include(dirname(__FILE__).'/footer.html')?>
-	
   </div>
-<?php } ?>
+  <!-- page stop -->
+
+
+
 
 </div>
+<!-- content stop -->
 
   <div class="clearer">&nbsp;</div>
 
   <?php flush()?>
 
-  <div class="stylefoot">
-	<?php tpl_pageinfo()?>
-  </div>
-
-
+<div class="stylefoot">
+  <div class="footrip1">&nbsp;</div>
+  <?php tpl_pageinfo()?>
+  <div class="footrip2">&nbsp;</div>
 </div>
 
-
+</div>
+<!-- dokuwiki stop -->
 
 <div class="no"><?php tpl_indexerWebBug()?></div>
 </body>

@@ -19,8 +19,6 @@ body {
 
 div.dokuwiki div.content {
 	width: 100%;
-	overflow: hidden;
-	background: __background__ url(images/sidebar-border.gif) repeat-y;
 }
 
 /* the document */
@@ -28,6 +26,8 @@ div.dokuwiki div.page {
   padding: 4px 10px 4px 10px;
   text-align: justify;
   background: __background__ url(images/bigsplodge.png) top right no-repeat;
+  margin-left: 300px;
+  float: left;
 }
 
 div.dokuwiki .logoicons .img16 {
@@ -336,7 +336,8 @@ div.dokuwiki div.breadcrumbs {
   background-color: __background_neu__;
   color: __text_neu__;
   font-size: 80%;
-  margin: -4px -25px 4px -10px;
+  margin: 3px 0px 3px 0px;
+  padding: 0 10px 0 10px;
 }
 
 div.dokuwiki span.user {
@@ -389,7 +390,7 @@ div.dokuwiki h3,
 div.dokuwiki h4,
 div.dokuwiki h5 {
     color: __text__;
-    background-color: inherit;
+    background-color: none;
     font-size: 100%;
     font-weight: normal;
     margin: 0 0 1em 0;
