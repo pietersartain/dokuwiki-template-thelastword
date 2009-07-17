@@ -19,14 +19,16 @@ body {
 
 div.dokuwiki div.content {
 	width: 100%;
+	overflow:hidden;
 }
 
 /* the document */
 div.dokuwiki div.page {
+  margin-right: 15px;
   padding: 4px 10px 4px 10px;
   text-align: justify;
   background: __background__ url(images/bigsplodge.png) top right no-repeat;
-  margin-left: 300px;
+  margin-left: 250px;
   float: left;
 }
 

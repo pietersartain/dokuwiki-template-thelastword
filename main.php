@@ -121,6 +121,8 @@ if (!defined('DOKU_INC')) die();
 	<?php }?>
     <!-- trace stop -->
 
+  <div class="clearer">&nbsp;</div>
+
   <!-- sidebar start for karate corners -->
   <?php if (tpl_getConf('enable')) { ?>
   <div id="sidebar" class="cornerBox">

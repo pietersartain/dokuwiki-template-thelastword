@@ -10,7 +10,8 @@
 #sidebar {
   width:210px; 
   min-width:210px;
-  margin:10px; 
+  margin:10px;
+  margin-right: -250px;
   padding:10px;
   background: __background_alt__ url('images/bigsplodge50.png') no-repeat;
   background-position: bottom left;
