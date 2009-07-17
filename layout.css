@@ -1,0 +1,124 @@
+/**
+ * Tableless Layout for default template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author moraes <moraes@tipos.com.br>
+ */
+
+/* -------------- top row --------------- */
+div.dokuwiki .header {
+/*  padding: 3px 0 0 2px; */
+/*  background: __background_alt__ url(images/sidebar-border.gif) repeat-y 85%; */
+  background: __background_alt__;
+  border-bottom: 1px solid __border__;
+}
+
+/* :: blog ~ */
+div.dokuwiki .pagename {
+  float: right;
+  font-size: 100%;
+  font-weight: bolder;
+  color: __text__;
+  text-align: right;
+  vertical-align: middle;
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+div.dokuwiki .pagename a {
+  color: __extern__ !important;
+  text-decoration: none !important;
+}
+
+/* pesartain.com graphic */
+div.dokuwiki .logo {
+  float: right;
+  font-size: 65%;
+  text-align: right;
+  border-left: 1px solid __border__;
+  height: 60px;
+  margin: 0px;
+}
+
+div.dokuwiki .logo .logoicons {
+	padding-top: 8px;
+}
+
+div.dokuwiki .logo img {
+	margin: 5px ;
+	margin-right: 15px;
+}
+
+div.dokuwiki .logoicons {
+	padding-top: 5px;
+}
+
+div.dokuwiki .logoicons img {
+	margin: 1px;
+}
+
+/*
+div.dokuwiki .logo a {
+  color: __background_alt__ !important;
+  text-decoration: none !important;
+  font-variant: small-caps;
+  letter-spacing: 2pt;
+}
+*/
+
+/* ---------------------------------------------------- */
+
+div.dokuwiki .tlw {
+	float: left;
+	padding: 5px;
+}
+
+div.dokuwiki .clearer {
+	clear: both;
+}
+
+div.dokuwiki .stylefoot {
+	background: __background_alt__;
+	font-size: 70%;
+	color: __text_neu__;
+	padding: 3px 0 3px 223px;
+}
+
+/* ---------------  top and bottom bar ---------------- */
+div.dokuwiki .bar {
+  border-top: 1px solid __border__;
+  border-bottom: 1px solid __border__;
+  background: __background_alt__;
+  padding: 0.1em 0.15em;
+  clear: both;
+}
+
+div.dokuwiki .bar-left {
+  float: left;
+}
+
+div.dokuwiki .bar-right {
+  float: right;
+  text-align: right;
+}
+
+div.dokuwiki #bar__bottom {
+  margin-bottom:3px;
+}
+
+/* ------------- File Metadata ----------------------- */
+
+div.dokuwiki div.meta {
+  clear: both;
+  margin-top: 1em;
+  color: __text_alt__;
+  font-size: 70%;
+}
+
+div.dokuwiki div.meta div.user {
+  float: left;
+}
+
+div.dokuwiki div.meta div.doc {
+  text-align: right;
+}
