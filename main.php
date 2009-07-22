@@ -33,9 +33,10 @@ if (!defined('DOKU_INC')) die();
     <?php tpl_pagetitle()?>
   </title>
 
-  <?php tpl_metaheaders($CONF_TPL)?>
+  <?php tpl_metaheaders(false,$CONF_TPL)?>
 
   <link rel="shortcut icon" href="<?php echo $DOKU_TPL?>images/favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="pesartain.com/blog ~ The Last Word" href="/feed.php?ns=blog&num=10&linkto=current&content=html" />
 
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>
