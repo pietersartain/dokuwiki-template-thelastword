@@ -36,7 +36,7 @@ if (!defined('DOKU_INC')) die();
   <?php tpl_metaheaders(false,$CONF_TPL)?>
 
   <link rel="shortcut icon" href="<?php echo $DOKU_TPL?>images/favicon.ico" />
-  <link rel="alternate" type="application/rss+xml" title="pesartain.com/blog ~ The Last Word" href="/feed.php?ns=blog&num=10&linkto=current&content=html" />
+  <link rel="alternate" type="application/rss+xml" title="pesartain.com/blog ~ The Last Word" href="/feed.php?ns=blog&amp;num=10&amp;linkto=current&amp;content=html" />
 
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>
@@ -54,7 +54,7 @@ if (!defined('DOKU_INC')) die();
     <div class="header">
 	
 	  <div class="tlw">
-		<img src="<?php echo $DOKU_TPL?>images/thelastword.png"></img>
+		<img src="<?php echo $DOKU_TPL?>images/thelastword.png" alt="The Last Word"></img>
 	  </div>
 
       <div class="logo">
@@ -65,9 +65,9 @@ if (!defined('DOKU_INC')) die();
 	
 		<div class="logoicons">	
 			<?php 
-				tpl_actionlink('admin','','','<img src="'.$DOKU_TPL.'images/16/admin.png" title="Admin"></img>');
-				tpl_actionlink('profile','','','<img src="'.$DOKU_TPL.'images/16/user.png" title="Profile"></img>');
-				tpl_actionlink('login','','','<img src="'.$DOKU_TPL.'images/16/logged_in.png" title="Log In"></img>');	
+				tpl_actionlink('admin','','','<img src="'.$DOKU_TPL.'images/16/admin.png" title="Admin" alt="Admin"></img>');
+				tpl_actionlink('profile','','','<img src="'.$DOKU_TPL.'images/16/user.png" title="Profile" alt="Profile"></img>');
+				tpl_actionlink('login','','','<img src="'.$DOKU_TPL.'images/16/logged_in.png" title="Log In" alt="Log In"></img>');	
 			?>
 		</div>
       </div>
@@ -76,10 +76,10 @@ if (!defined('DOKU_INC')) die();
         :: <?php tpl_link(wl($ID,'do=backlink'),tpl_pagename($ID)) ?> ~ 
 		<div class="logoicons">
 			<?php 
-				tpl_link(wl('disclaimer'),'<img src="'.$DOKU_TPL.'images/20/info.png" title="Disclaimer"></img>','class="img16"');	
-				tpl_link('feed.php?ns=blog&num=10&linkto=current&content=html','<img src="'.$DOKU_TPL.'images/rss.png" title="TLW RSS"></img>');
-				tpl_actionlink('edit','','','<img src="'.$DOKU_TPL.'images/20/edit.png" class="img16" title="Edit"></img>');
-				tpl_actionlink('history','','','<img src="'.$DOKU_TPL.'images/20/history.png" class="img16" title="Previous versions"></img>');
+				tpl_link(wl('disclaimer'),'<img src="'.$DOKU_TPL.'images/20/info.png" title="Disclaimer" alt="Disclaimer"></img>','class="img16"');	
+				tpl_link('feed.php?ns=blog&amp;num=10&amp;linkto=current&amp;content=html','<img src="'.$DOKU_TPL.'images/rss.png" title="TLW RSS" alt="TLW RSS"></img>');
+				tpl_actionlink('edit','','','<img src="'.$DOKU_TPL.'images/20/edit.png" class="img16" title="Edit" alt="Edit"></img>');
+				tpl_actionlink('history','','','<img src="'.$DOKU_TPL.'images/20/history.png" class="img16" title="Previous versions" alt="Previous versions"></img>');
 				
 			?>
 		</div>
