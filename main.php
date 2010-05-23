@@ -54,14 +54,18 @@ if (!defined('DOKU_INC')) die();
     <div class="header">
 	
 	  <div class="tlw">
+		<a href="http://pesartain.com/blog">
 		<img src="<?php echo $DOKU_TPL?>images/thelastword.png" alt="The Last Word"></img>
+		</a>
 	  </div>
 
       <div class="logo">
         <?php 
 			//tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"')
 		?>
+		<a href="http://pesartain.com"
 		<img src="<?php echo $DOKU_TPL?>images/twl-pesartain.com.png"></img>
+		</a>
 	
 		<div class="logoicons">	
 			<?php 
