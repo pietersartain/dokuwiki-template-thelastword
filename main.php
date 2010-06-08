@@ -36,7 +36,7 @@ if (!defined('DOKU_INC')) die();
   <?php tpl_metaheaders(false,$CONF_TPL)?>
 
   <link rel="shortcut icon" href="<?php echo $DOKU_TPL?>images/favicon.ico" />
-  <link rel="me" type="text/html" title="http://www.google.com/profiles/pesartain" />
+  <link rel="me" type="text/html" href="http://www.google.com/profiles/pesartain" />
   <link rel="alternate" type="application/rss+xml" title="pesartain.com/blog ~ The Last Word" href="/feed.php?ns=blog&amp;num=10&amp;linkto=current&amp;content=html" />
 
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
